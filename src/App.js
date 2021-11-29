@@ -1,4 +1,7 @@
 import React from 'react';
+import Todo from './components/Todo'
+
+
 
 class App extends React.Component {
   constructor(){
@@ -30,7 +33,7 @@ class App extends React.Component {
         <ul>
           {
             todos.map(todo => {
-              return (<li>{todo.task} {todo.completed? <span>- completed</span> : <span></span>}</li>)
+              return (<Todo todo={todo}/>)
             })
           }
          
